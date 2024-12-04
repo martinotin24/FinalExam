@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FINAL TEST</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    .error {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>JSville Courier Management System by Martin Munoz</h1>
+  <form id="packageForm">
+    <label for="recipientName">Recipient Name:</label><br>
+    <input type="text" id="recipientName" required><br><br>
+
+    <label for="packageId">Package ID (numeric only):</label><br>
+    <input type="text" id="packageId" required><br><br>
+
+    <label for="deliveryAddress">Delivery Address:</label><br>
+    <input type="text" id="deliveryAddress" required><br><br>
+
+    <label for="weight">Weight (kg):</label><br>
+    <input type="number" id="weight" step="0.1" required><br><br>
+
+    <button type="button" id="addPackageButton">Add Package</button>
+  </form>
+
+  <p class="error" id="errorMessage"></p>
+
+  <h2>Sorted Packages</h2>
+  <table id="packagesTable">
+    <thead>
+      <tr>
+        <th>Recipient Name</th>
+        <th>Package ID</th>
+        <th>Delivery Address</th>
+        <th>Weight (kg)</th>
+        <th>Tracking Code</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="app.js"></script>
+</body>
+</html>
